@@ -80,6 +80,11 @@ def main():
     args = ap.parse_args()
 
     os.makedirs(config.OUTPUT_DIR, exist_ok=True)
+    missing = [n for n, v in (("DRIVE_HTML_FOLDER_ID", config.DRIVE_HTML_FOLDER_ID),
+                              ("DRIVE_MUSIC_FOLDER_ID", config.DRIVE_MUSIC_FOLDER_ID)) if not v]
+    if missing:
+        print(f"ENGINE: missing required config (set as secrets/env): {', '.join(missing)}")
+        return 2
     history = load_history()
     svc = drive_fetch._service()
     new_designs = drive_fetch.fetch_new_html(svc, history)

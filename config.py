@@ -10,7 +10,7 @@ TAGLINE = "Crafted Beyond Time."
 
 # Drive (IDs or env overrides; HTML folder is created by the owner later)
 DRIVE_HTML_FOLDER_ID = os.environ.get("DRIVE_HTML_FOLDER_ID", "")
-DRIVE_MUSIC_FOLDER_ID = os.environ.get("DRIVE_MUSIC_FOLDER_ID", "1gjNeB5i9MC7jVkSxjYKzEtSoqnDLdy4n")
+DRIVE_MUSIC_FOLDER_ID = os.environ.get("DRIVE_MUSIC_FOLDER_ID", "")
 
 # Local work dirs (all git-ignored)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
